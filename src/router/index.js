@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router';
+import { createWebHistory, createRouter} from 'vue-router';
 import main from '../views/main.vue';
 import cities from '../views/cities.vue';
 import offers from '../views/offers.vue';
@@ -10,7 +10,7 @@ const routes = [
         component: main
     },
     {
-        path: '/cities/:path1',
+        path: '/cities',
         name: 'cities',
         component: cities
     },
@@ -23,7 +23,14 @@ const routes = [
 
 const router = createRouter({
 	history : createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+          return { top: 0 }
+        }
+    },
 });
 
 export default router;

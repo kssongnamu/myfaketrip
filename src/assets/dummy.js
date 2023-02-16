@@ -4,11 +4,11 @@ const RecentItem = {
     Data: [
         {
             ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/102364/553136_medium_1611721634.jpg?1611721634',
-            Title: '[오사카] 한큐 투어리스트 패스 티켓 교환권 1/2일권',
+            Title: '1. [오사카] 한큐 투어리스트 패스 티켓 교환권 1/2일권',
             Data: [
                 {
                     ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/116280/631647_medium_1653902067.jpg?1653902067',
-                    Label: '티켓/패스 ・ 오사카',
+                    Label: '1. 티켓/패스 ・ 오사카',
                     Title: '[QR 교환권] 한신 투어리스트 패스 티켓 교환권 1일권',
                     Num: '1,068',
                     Price: '5,570원 / 1인'
@@ -38,11 +38,11 @@ const RecentItem = {
         },
         {
             ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/113325/763093_medium_1675643698.jpg?1675643698',
-            Title: '[서울 잠실] 롯데월드 어드벤처 매직패스 프리미엄 패키지',
+            Title: '2. [서울 잠실] 롯데월드 어드벤처 매직패스 프리미엄 패키지',
             Data: [
                 {
                     ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/70816/737984_medium_1673497752.jpg?1673497752',
-                    Label: '티켓/패스 ・ 서울',
+                    Label: '2. 티켓/패스 ・ 서울',
                     Title: '[QR바로입장] 롯데월드 어드벤처 종합이용권',
                     Num: '2,117',
                     Price: '32,495원 / 1인'
@@ -72,11 +72,45 @@ const RecentItem = {
         },
         {
             ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/102364/553136_medium_1611721634.jpg?1611721634',
-            Title: '[오사카] 한큐 투어리스트 패스 티켓 교환권 1/2일권',
+            Title: '3. [오사카] 한큐 투어리스트 패스 티켓 교환권 1/2일권',
             Data: [
                 {
                     ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/70816/737984_medium_1673497752.jpg?1673497752',
+                    Label: '3. 티켓/패스 ・ 서울',
+                    Title: '[QR바로입장] 롯데월드 어드벤처 종합이용권',
+                    Num: '2,117',
+                    Price: '32,495원 / 1인'
+                },
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/113325/763093_medium_1675643698.jpg?1675643698',
                     Label: '티켓/패스 ・ 서울',
+                    Title: '[서울 잠실] 롯데월드 어드벤처 매직패스 프리미엄 패키지',
+                    Num: '28',
+                    Price: '85,500원 / 1인'
+                },
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/102916/766230_medium_1676214240.jpg?1676214240',
+                    Label: '티켓/패스 ・ 제주도',
+                    Title: '[제주] 제주투어패스 48시간 프리패스권 ',
+                    Num: '1,647',
+                    Price: '23,655원 / 1인'
+                },
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/50211/342328_medium_1618391385.jpg?1618391385',
+                    Label: '티켓/패스 ・ 오사카',
+                    Title: '오사카 유니버셜 스튜디오 재팬 입장권 (1일권)',
+                    Num: '6,685',
+                    Price: '54,900원 / 1인'
+                }
+            ]
+        },
+        {
+            ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/113325/763093_medium_1675643698.jpg?1675643698',
+            Title: '4. [서울 잠실] 롯데월드 어드벤처 매직패스 프리미엄 패키지',
+            Data: [
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/70816/737984_medium_1673497752.jpg?1673497752',
+                    Label: '4. 티켓/패스 ・ 서울',
                     Title: '[QR바로입장] 롯데월드 어드벤처 종합이용권',
                     Num: '2,117',
                     Price: '32,495원 / 1인'
@@ -106,11 +140,11 @@ const RecentItem = {
         },
         {
             ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/102364/553136_medium_1611721634.jpg?1611721634',
-            Title: '[오사카] 한큐 투어리스트 패스 티켓 교환권 1/2일권',
+            Title: '5. [오사카] 한큐 투어리스트 패스 티켓 교환권 1/2일권',
             Data: [
                 {
                     ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/70816/737984_medium_1673497752.jpg?1673497752',
-                    Label: '티켓/패스 ・ 서울',
+                    Label: '5. 티켓/패스 ・ 서울',
                     Title: '[QR바로입장] 롯데월드 어드벤처 종합이용권',
                     Num: '2,117',
                     Price: '32,495원 / 1인'
@@ -138,13 +172,47 @@ const RecentItem = {
                 }
             ]
         },
+        {
+            ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/113325/763093_medium_1675643698.jpg?1675643698',
+            Title: '6. [서울 잠실] 롯데월드 어드벤처 매직패스 프리미엄 패키지',
+            Data: [
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/70816/737984_medium_1673497752.jpg?1673497752',
+                    Label: '6. 티켓/패스 ・ 서울',
+                    Title: '[QR바로입장] 롯데월드 어드벤처 종합이용권',
+                    Num: '2,117',
+                    Price: '32,495원 / 1인'
+                },
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/113325/763093_medium_1675643698.jpg?1675643698',
+                    Label: '티켓/패스 ・ 서울',
+                    Title: '[서울 잠실] 롯데월드 어드벤처 매직패스 프리미엄 패키지',
+                    Num: '28',
+                    Price: '85,500원 / 1인'
+                },
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/102916/766230_medium_1676214240.jpg?1676214240',
+                    Label: '티켓/패스 ・ 제주도',
+                    Title: '[제주] 제주투어패스 48시간 프리패스권 ',
+                    Num: '1,647',
+                    Price: '23,655원 / 1인'
+                },
+                {
+                    ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/50211/342328_medium_1618391385.jpg?1618391385',
+                    Label: '티켓/패스 ・ 오사카',
+                    Title: '오사카 유니버셜 스튜디오 재팬 입장권 (1일권)',
+                    Num: '6,685',
+                    Price: '54,900원 / 1인'
+                }
+            ]
+        }
     ]
 }
 const CityCard = {
         Type: 'CityCard',
         Title: '여행이 돌아왔어요!',
         Data: [
-            [{
+            {
                 Name: '오사카',
                 Num: '370여 개의 여행상품',
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/landscapes/4720_large_square_1535703132.jpg?1535703132'
@@ -163,8 +231,8 @@ const CityCard = {
                 Name: '제주도',
                 Num: '1,490여 개의 여행상품',
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/landscapes/4737_large_square_1535949304.jpg?1535949304'
-            }],
-            [{
+            },
+            {
                 Name: '라스베가스',
                 Num: '370여 개의 여행상품',
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/landscapes/4654_large_square_1535621335.jpg?1535621335'
@@ -183,8 +251,8 @@ const CityCard = {
                 Name: '런던',
                 Num: '530여 개의 여행상품',
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/landscapes/4750_large_square_1536049651.jpg?1536049651'
-            }],
-            [{
+            },
+            {
                 Name: '피렌체',
                 Num: '260여 개의 여행상품',
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/landscapes/4711_large_square_1535695390.jpg?1535695390'
@@ -203,7 +271,7 @@ const CityCard = {
                 Name: '방콕',
                 Num: '680여 개의 여행상품',
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/landscapes/4652_large_square_1535619901.jpg?1535619901'
-            }]
+            }
         ]
 }
 const Banner = {
@@ -224,7 +292,7 @@ const MAIN_TOPN = {
         Type: 'MainCard',
         Title: '실시간 베스트 상품',
         Data: [
-            [{
+            {
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/70816/737984_medium_1673497752.jpg?1673497752',
                 Label: '티켓/패스 ・ 서울',
                 Title: '[QR바로입장] 롯데월드 어드벤처 종합이용권',
@@ -251,8 +319,8 @@ const MAIN_TOPN = {
                 Title: '오사카 유니버셜 스튜디오 재팬 입장권 (1일권)',
                 Num: '6,685',
                 Price: '54,900원 / 1인'
-            }],
-            [{
+            },
+            {
                 ImgSrc: 'https://d2ur7st6jjikze.cloudfront.net/offer_photos/129438/759317_medium_1675066609.jpg?1675066609',
                 Label: '가이드 투어 ・ 부여',
                 Title: '[충남/부여] 봄으로 가는 백제의 별밤 천문캠프 in 롯데리조트 부여',
@@ -279,7 +347,7 @@ const MAIN_TOPN = {
                 Title: '#오사카에 가는 사람들',
                 Num: '4',
                 Price: '298,000원 / 1인'
-            }]
+            }
         ]
 }
 const Info = [

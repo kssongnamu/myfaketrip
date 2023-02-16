@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-image" :style="`background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('${dummy.CityCard.Data[0][route.params.path1].ImgSrc}'); background-size: cover; background-position: center center;`">
+    <div class="bg-image" :style="`background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('${dummy.CityCard.Data[route.params.path1].ImgSrc}'); background-size: cover; background-position: center center;`">
         <headerCp></headerCp>
         <div class="mx-auto mb-5 text-center text-white pt-5 fw-bold" style="font-size: 54px; max-width: 1060px; height: 220px;">
-            {{ dummy.CityCard.Data[0][route.params.path1].Name }}
+            {{ dummy.CityCard.Data[route.params.path1].Name }}
         </div>
     </div>
     <main>
@@ -16,7 +16,7 @@
 <script setup>
 import dummy from '@/assets/dummy'
 import swiperCp from '@/components/swiper-cp.vue';
-import footerCp from '@/components/footer-cp.vue';
+import footerCp from '@/components/header-cp.vue';
 import headerCp from '@/components/header-cp.vue';
 import { useRoute } from 'vue-router'
 const route = useRoute()
