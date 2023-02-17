@@ -1,9 +1,15 @@
 <template>
-    <div class="border-top">
+    <div class="border-top mt-5">
         <footer class="mx-auto py-5" style="max-width: 1060px;">
             <div class="d-flex pb-4 border-bottom info">
                 <div class="col">
-                    <UlLi :UlData="guide"></UlLi>
+                    <span class="fs-18"> 고객지원실 운영안내 </span>
+                    <ul class="list-group">
+                        <li class="list-group-item"> 연중무휴 09:00-18:00 (점심시간 12:00-13:00) </li>
+                        <li class="list-group-item"> 주말/공휴일 포함, 한국시간 기준 </li>
+                        <li class="list-group-item"> ※ 항공권 환불/변경은 평일 09:00-17:00 접수 가능 </li>
+                        <li class="list-group-item"> 유선상담 1670-8208 </li>
+                    </ul>>
                     <div class="mt-3">
                         <span role="button">
                             <button type="button" class="fs-14 p-2 border-1 border-light bg-white rounded-3 fw-bold">
@@ -13,8 +19,30 @@
                     </div>
                 </div>
                 <div class="d-flex col info-nav">
-                    <div class="col" v-for="UlData in [introduction, partner, support]">
-                        <UlLi :UlData="UlData"></UlLi>
+                    <div class="col">
+                        <span class="fs-18"> 소개 </span>
+                        <ul class="list-group">
+                            <li class="list-group-item"> 회사소개 </li>
+                            <li class="list-group-item"> 채용 </li>
+                            <li class="list-group-item"> 공고 </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <span class="fs-18"> 파트너 </span>
+                        <ul class="list-group">
+                            <li class="list-group-item"> 파트너 등록하기 </li>
+                            <li class="list-group-item"> Affiliate 프로그램 </li>
+                            <li class="list-group-item"> 리얼파트너 </li>
+                            <li class="list-group-item"> 파트너 블로그 </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <span class="fs-18"> 지원 </span>
+                        <ul class="list-group">
+                            <li class="list-group-item"> 공지사항/FAQ </li>
+                            <li class="list-group-item"> 최저가 보장제 </li>
+                            <li class="list-group-item"> 공고 </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -70,21 +98,3 @@
         </footer>
     </div>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-import UlLi from '@/components/ul-li-cp.vue';
-
-const guide = ref({
-    Title: '고객지원실 운영안내', 
-    Data: [
-        '연중무휴 09:00-18:00 (점심시간 12:00-13:00)',
-        '주말/공휴일 포함, 한국시간 기준',
-        '※ 항공권 환불/변경은 평일 09:00-17:00 접수 가능',
-        '유선상담 1670-8208'
-    ] 
-});
-const introduction = ref({Title: '소개', Data: ['회사소개', '채용', '공고']});
-const partner = ref({Title: '파트너', Data: ['파트너 등록하기', 'Affiliate 프로그램', '리얼파트너', '파트너 블로그']});
-const support =  ref({Title: '지원', Data: ['공지사항/FAQ', '최저가 보장제', '공고']});
-</script>

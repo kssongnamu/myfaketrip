@@ -1,28 +1,33 @@
 <template>
-    <headerCp></headerCp>
+    <header-cp></header-cp>
     <main>
-        <div class="d-flex mx-auto mt-5 justify-content-between" style="width: 1060px; height: 2000px;">
+        <div class="d-flex mx-auto mt-5 justify-content-between" style="width: 1060px;">
             <article class="mx-auto mb-5 text-center pt-5 fw-bold" style="width: 700px;">
-                <h1>{{ route.query.Title }}</h1>
-
+                <h1 class="text-start">{{ route.query.title }}</h1>
+                <div class="mt-5">
+                    <img class="w-100" :src="route.query.image">
+                </div>
             </article>
             <aside style="width: 320px;">
-                <h4 class="p-5 border position-sticky" style="top: 80px;">{{ route.query.Price }}</h4>
+                <h4 class="p-5 border position-sticky" style="top: 80px;">{{ route.query.price }}원 / 1인</h4>
             </aside>
         </div>
         <section class="border-top">
-            <div class="mx-auto mb-5" style="max-width: 1060px;" v-for="SwiperData in [dummy.MAIN_TOPN, dummy.MAIN_TOPN, dummy.MAIN_TOPN]">
-                <swiperCp :SwiperData="SwiperData"></swiperCp>
+            <div class="mx-auto mb-5" style="max-width: 1060px;">
+                <div class="fs-4 fw-bold mt-5 mb-3">
+                    {{ route.query.category }} 상품
+                </div>
+                <swiperCp :swiperData="$utils.utils.categoryData(route.query.category)" :swiperNum="2"></swiperCp>
             </div>
         </section>
     </main>
-    <footerCp></footerCp>
+    <footer-cp></footer-cp>
 </template>
 
 <script setup>
 import dummy from '@/assets/dummy'
 import swiperCp from '@/components/swiper-cp.vue';
-import footerCp from '@/components/header-cp.vue';
+import footerCp from '@/components/footer-cp.vue';
 import headerCp from '@/components/header-cp.vue';
 import { useRoute } from 'vue-router'
 const route = useRoute()

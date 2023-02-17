@@ -14,4 +14,7 @@
   line-height: 1.5;
   overflow-anchor: none;
 }
+a {
+  text-decoration-line: none;
+}
 </style>
