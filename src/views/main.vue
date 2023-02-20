@@ -7,12 +7,12 @@
                     <div class="fs-1 fw-bold mt-5 mb-3">
                         여행이 돌아왔어요!
                     </div>
-                    <swiperCp :swiperData="dummy.cityData" :swiperType="'cityCard'" :swiperNum="0"></swiperCp>
+                    <swiperCp :swiperData="bannerList" :swiperType="'cityCard'" :swiperNum="0"></swiperCp>
                 </section>
                 <section class="mb-5">
-                    <swiperCp :swiperData="dummy.banner" :swiperType="'banner'" :swiperNum="1"></swiperCp>
+                    <swiperCp :swiperData="$utils.utils.getData('banner')" :swiperType="'banner'" :swiperNum="1"></swiperCp>
                 </section>
-                <section>
+                <!-- <section>
                     <div class="fs-4 fw-bold mt-5 mb-3">
                         여행편의 상품
                     </div>
@@ -35,7 +35,7 @@
                         마이페이크트립의 여행 정보
                     </div>
                     <div class="d-flex bg-light border py-5" style="height: 196px;">
-                        <div class="fs-14 mx-auto" style="width: 260px;" v-for="infoData in dummy.info">
+                        <div class="fs-14 mx-auto" style="width: 260px;" v-for="infoData in $utils.utils.getData('info')">
                             <div class="mb-3">
                                 <img :src="infoData.iconSrc">
                                 <a class="ms-2 text-decoration-none" href="/" target="_blank" rel="noopener noreferrer">
@@ -46,7 +46,7 @@
                             <p class="text-start"> {{ infoData.data }} </p>
                         </div>
                     </div>
-                </section>
+                </section> -->
             </div>
         </main>
         <footerCp></footerCp>
@@ -54,10 +54,27 @@
 </template>
 
 <script setup>
-import dummy from '@/assets/dummy'
 import swiperCp from '@/components/swiper-cp.vue';
 import footerCp from '@/components/footer-cp.vue';
 import headerCp from '@/components/header-cp.vue';
+import { onMounted, getCurrentInstance, reactive } from 'vue';
+
+const { proxy } = getCurrentInstance()
+
+let bannerList = reactive([])
+
+onMounted(()=>{    
+ loadBannerList();
+})
+
+async function loadBannerList() {
+    const list = await proxy.$utils.utils.getData('cityInfo')    
+    list.forEach((item)=>{
+        bannerList.push(item)        
+    })
+}
+
+
 
 
 </script>

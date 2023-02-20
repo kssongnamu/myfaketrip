@@ -28,10 +28,10 @@
         <template v-else-if="swiperType !== 'banner'">
             <div class="position-relative">
                 <swiper :navigation="navigationParam(swiperNum)" :slidesPerView="4" :slidesPerGroup="4" :spaceBetween="20" :modules="modules" class="w-100 mx-auto">
-                    <template v-for="dataCol, index in swiperData">
+                    <template v-for="dataCol in swiperData">
                         <swiper-slide class="d-flex" v-if="swiperType === 'cityCard'">
                             <router-link 
-                                :to="{name: 'cities', params: { path: index }}" 
+                                :to="{name: 'cities', params: { path: dataCol.name }}" 
                                 class="position-relative overflow-hidden rounded-3" 
                                 style="width: 250px; height: 333px;"
                             >

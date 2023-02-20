@@ -25,7 +25,6 @@
 </template>
 
 <script setup>
-import dummy from '@/assets/dummy'
 import swiperCp from '@/components/swiper-cp.vue';
 import footerCp from '@/components/footer-cp.vue';
 import headerCp from '@/components/header-cp.vue';
