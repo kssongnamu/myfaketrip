@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="swiperData !== []">
         <template v-if="swiperType === 'recentItem'">
             <div class="position-relative">
                 <swiper :navigation="navigationParam(swiperNum)" :slidesPerView="4" :slidesPerGroup="4" :modules="modules" class="w-100 mx-auto">
@@ -31,7 +31,7 @@
                     <template v-for="dataCol in swiperData">
                         <swiper-slide class="d-flex" v-if="swiperType === 'cityCard'">
                             <router-link 
-                                :to="{name: 'cities', params: { path: dataCol.name }}" 
+                                :to="{name: 'cities', query: { name: dataCol.name, image: dataCol.image }}" 
                                 class="position-relative overflow-hidden rounded-3" 
                                 style="width: 250px; height: 333px;"
                             >

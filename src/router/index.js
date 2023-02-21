@@ -10,7 +10,7 @@ const routes = [
         component: main
     },
     {
-        path: '/cities/:path',
+        path: '/cities',
         name: 'cities',
         component: cities
     },

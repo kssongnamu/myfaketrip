@@ -17,7 +17,7 @@
                 <div class="fs-4 fw-bold mt-5 mb-3">
                     {{ route.query.category }} 상품
                 </div>
-                <swiperCp :swiperData="$utils.utils.categoryData(route.query.category)" :swiperNum="2"></swiperCp>
+                <swiperCp :swiperData="cateList" :swiperNum="2"></swiperCp>
             </div>
         </section>
     </main>
@@ -28,8 +28,32 @@
 import swiperCp from '@/components/swiper-cp.vue';
 import footerCp from '@/components/footer-cp.vue';
 import headerCp from '@/components/header-cp.vue';
+import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router'
 const route = useRoute()
+
+onMounted(()=>{
+    loadcateData();
+})
+
+let cateList = ref([])
+
+
+async function loadcateData() {
+    let list = await getcateData(route.query.category);
+    cateList.value = list;
+}
+
+async function getcateData(option) {
+
+    var rows = await $.ajax({
+        url: `http://localhost:3000/category/${encodeURIComponent(option)}`,
+        method: 'GET',
+        dataType: 'json',    
+    })
+
+    return rows;
+}
 
 </script>
 

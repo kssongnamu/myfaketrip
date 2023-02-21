@@ -1,13 +1,13 @@
 <template>
-    <div class="bg-image" :style="`background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('${dummy.cityData[route.params.path].image}'); background-size: cover; background-position: center center;`">
+    <div class="bg-image" :style="`background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('${route.query.image}'); background-size: cover; background-position: center center;`">
         <header-cp></header-cp>
         <div class="mx-auto mb-5 text-center text-white pt-5 fw-bold" style="font-size: 54px; max-width: 1060px; height: 220px;">
-            {{ route.params.path }}
+            {{ route.query.name }}
         </div>
     </div>
     <main>
         <section class="mx-auto mb-5" style="max-width: 1060px;">
-            <swiperCp :swiperData="$utils.utils.cityKey(dummy.cityData[route.params.path].name)" :swiperNum="0"></swiperCp>
+            <swiperCp :swiperData="cityData" :swiperNum="0"></swiperCp>
         </section>
     </main>
     <footer-cp></footer-cp>
@@ -17,8 +17,32 @@
 import swiperCp from '@/components/swiper-cp.vue';
 import footerCp from '@/components/footer-cp.vue';
 import headerCp from '@/components/header-cp.vue';
+import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router'
 const route = useRoute()
+
+onMounted(()=>{
+    loadCityData();
+})
+
+let cityData = ref([])
+
+
+async function loadCityData() {
+    let list = await getcityData(route.query.name);
+    cityData.ve = list;
+}
+
+async function getcityData(option) {
+
+    var rows = await $.ajax({
+        url: `http://localhost:3000/cityName/${encodeURIComponent(option)}`,
+        method: 'GET',
+        dataType: 'json',    
+    })
+
+    return rows;
+}
 
 </script>
 
